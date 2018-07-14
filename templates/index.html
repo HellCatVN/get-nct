@@ -1,4 +1,81 @@
 {% include 'header.html' %}
-<h1>Hello World!!!</h1>  
+<div class="container">
+    <div class="title">
+        <div class="row">
+            <div class="pull-right">
+                <span>Cập nhật:</span>
+                <span class="label label-rose">9/7/2018</span>
+                <span>Trạng Thái:</span>
+                <span class="label label-success">Hoạt Động</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-success nav-pills-icons nav-stacked" role="tablist">
+                            <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                            -->
+                            <li class="active">
+                                <a href="#whats-new" role="tab" data-toggle="tab" aria-expanded="true">
+                                    <i class="material-icons">whatshot</i>
+                                    Có gì mới ? (0.0.4)
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#future-feature" role="tab" data-toggle="tab" aria-expanded="false">
+                                    <i class="material-icons">update</i>
+                                    Tính năng tương lai
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="whats-new">
+                               Quá trình phát triển các tính năng :
+                              <br><br>
+                              - Tải nhaccuatui với chất lượng cao
+                              <br>
+                              - Cập nhật theo API mới của nhaccuatui
+                              <br>
+                              - Nâng cấp API get nhaccuatui qua chatbot
+                            </div>
+                            <div class="tab-pane" id="future-feature">
+                                Các tính năng sẽ ra mắt thời gian tới :
+                                <br><br>
+                                - Tải lời bài hát và giải mã để lấy nội dung chuẩn
+                                <br>
+                                - Tải full bài hát (MP3,lyric,thumbnail,...) Vào file zip
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h2>Tính năng cơ bản:</h2>
+            <h4>-Giúp bạn tải các bản nhạc dưới định dạng 128,320,lossless.</h4>
+            <h2>Công cụ tải nhaccuatui:</h2>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+                    <form action="/get.html" method="POST">
+                        <div class="form-group">
+                            <input name="url" type="text" value="" placeholder="Nhập vào link cần get" class="form-control" />
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success btn-round" type="submit">
+                                <i class="material-icons">favorite</i> Get
+                                <div class="ripple-container"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% include 'footer.html' %}
 

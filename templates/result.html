@@ -1,0 +1,83 @@
+{% include 'header.html' %}
+<div class="container">
+    <div class="title">
+        <br>
+        <div class="row">
+            <div class="pull-right">
+                <span>Cập nhật:</span>
+                <span class="label label-rose">9/7/2018</span>
+                <span>Trạng Thái:</span>
+                <span class="label label-success">Hoạt Động</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h2>Link Gốc</h2>
+            <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group is-empty">
+                            <input type="text" value="{{ songData['6'] }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="{{ songData['6'] }}" target="_blank">
+                            <button type="button" class="btn btn-rose btn-round btn-block">New Tab</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4">
+                <div class="card card-blog">
+                    <div class="card-image">
+                        <a href="#pablo">
+                            <img class="img" src="{{ songData['8'] }}">
+                        </a>
+                        <div class="colored-shadow" style="background-image: url(&quot;{{ songData['8'] }}&quot;); opacity: 1;"></div>
+                        <div class="ripple-container"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-center">
+                            <h3>{{ songData['2'] }}</h3>
+                            <h4>{{ songData['3'] }}</h4>
+                        </div>
+                        <audio style="width:100%" controls autoplay>
+                            <source src="{{ songData['7'] }}" type="audio/mpeg"> Your browser does not support the audio element.
+                        </audio>
+                        <h6 class="category text-danger">
+                            <i class="material-icons">trending_up</i> Trending
+                        </h6>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success btn-round">
+                                <i class="material-icons">restore</i>Tiếp Tục Get
+                                <div class="ripple-container"></div>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                                <a href="{{ songData['11'] }}" class="btn btn-success btn-round">128 Kbps
+                                    <div class="ripple-container"></div>
+                                </a>
+                        </div>
+                        <div class="text-center">
+                                <a href="{{ songData['12'] }}" class="btn btn-success btn-round">320 Kbps
+                                    <div class="ripple-container"></div>
+                                </a>
+                        </div>
+                        <div class="text-center">
+                                <a href="{{ songData['19'] }}" class="btn btn-success btn-round">Lossless
+                                    <div class="ripple-container"></div>
+                                </a>
+                        </div>
+                        <div class="footer">
+                            <div class="stats">
+                                <i class="material-icons">schedule</i> Just Now
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% include 'footer.html' %}
