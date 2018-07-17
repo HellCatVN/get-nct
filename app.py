@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 import requests
 import json
-from flask import Flask,request, render_template
+from flask import Flask,request, render_template ,jsonify
 
 app = Flask(__name__)
 
@@ -47,9 +48,15 @@ def getNctP():
     else:
         return "Ahuhu"
 
-@app.route("/hello/<string:name>/")
-def hello_user(name):  
-    return render_template('hello.html', name=name)
+@app.route("/api.html")
+def getNctAPI():  
+    url = request.args.get('url')
+    if url == None:
+        messages = [{ "text": "URL bạn nhập có vẻ không hợp lệ!" }]
+        return jsonify({'messages': messages})
+
+    return url
+
 
 
 if __name__ == "__main__":  
