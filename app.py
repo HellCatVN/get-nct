@@ -59,7 +59,7 @@ def getNctAPI():
         if songId != None:
             token = createToken()
             songData = songJson(songId,token)
-            messages = [{ "text": "Tên Bài Hát:" + songData[str(2)].encode('utf-8') + " - " + songData[str(3)].encode('utf-8') + "\n" + "Link 128:" + songData[str(11)].encode('utf-8')}]
+            messages = [{ "text": "Tên Bài Hát:" + songData[str(2)] + " - " + songData[str(3)]  + "\n" + "Link 128:" + songData[str(11)]}]
             return jsonify({'messages': messages})  
 
 
