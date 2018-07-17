@@ -54,9 +54,13 @@ def getNctAPI():
     if url == None:
         messages = [{ "text": "URL bạn nhập có vẻ không hợp lệ!" }]
         return jsonify({'messages': messages})
-
-    return url
-
+    else:
+        songId = getID(url)
+        if songId != None:
+            token = createToken()
+            songData = songJson(songId,token)
+            messages = [{ "text": "Tên Bài Hát:" + songData[str(2)].encode('utf-8') + " - " + songData[str(3)].encode('utf-8') + "\n" + "Link 128:" + songData[str(11)].encode('utf-8')}]
+            return jsonify({'messages': messages})  
 
 
 if __name__ == "__main__":  
